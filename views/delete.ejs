@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>delete record</title>
+</head>
+<body>
+  <h1>your are about to delete record from DB: <%= employee.emp_email %></h1>
+  <form method="post" action="/home/show/<%= employee.emp_id %>?_method=DELETE">
+    <input type="text" name="emp_username" placeholder="Enter emp_username to delete"><br><br>
+    <button>Delete</button>
+
+  </form>
+</body>
+</html>

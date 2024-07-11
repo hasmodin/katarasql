@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show all emloyees</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Katara Employees Database: </h1>
+
+    <table>
+        <tr>
+            <th>emp_id</th>
+            <th>emp_username</th>
+            
+            <th>emp_fullname</th>
+            <th>emp_salary</th>
+            <th>emp_email</th>
+        </tr>
+       
+            <% for(employee of employees) { %>
+            <tr>
+                <td><%= employee.emp_id %></td>
+                <td><%= employee.emp_username %></td>
+               
+                <td><%= employee.emp_fullname %></td>
+                <td><%= employee.emp_salary %></td>
+                <td><%= employee.emp_email %></td>
+                <td>
+                    <form method="get" action="/home/new">
+                        <button> New</button>
+                    </form>
+                    
+                </td>
+                <td>
+                    <form method="get" action="/home/<%= employee.emp_id %>/edit">
+                        <button>Edit</button>
+                    </form>
+                </td>
+
+                <td>
+                    <form method="get" action="/home/<%= employee.emp_id %>/delete">
+                        <button>Delete</button>
+                    </form>
+                </td>
+
+            </tr>
+                <% } %>
+        
+    </table>
+</body>
+</html>

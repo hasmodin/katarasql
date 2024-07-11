@@ -1,0 +1,17 @@
+table {
+    border-collapse: collapse;
+    border: 1px solid;
+
+}
+th {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
+input {
+    padding: 10px;
+}
